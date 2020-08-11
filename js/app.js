@@ -28,16 +28,8 @@ var seattle = {
         this.guestCookiesArr.push(`${storeHoursArr[i]} : ${cookiesPerHourArr[i]}`,)
       } 
       this.dailyCookieCount.push(dailyCount);
-    },
-    cookiesPerHour: function(guestTotal,avgCookie){
-      var guests = this.guestsPerHour();
-      var cookies = this.avgCookieBuy;
-      var totalCookies = [guests * cookies];
-      console.log(totalCookies);
-      return totalCookies;
     }
-  }
-
+    
 }
 seattle.guestsCookies();
 console.log(seattle);
