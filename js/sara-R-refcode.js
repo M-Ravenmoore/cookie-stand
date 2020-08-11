@@ -17,3 +17,25 @@ cookiesPerHour: function() {
   cookiesPerHourArr.push('Total: ' + totalCount + ' cookies');
   return cookiesPerHourArr;
 },
+
+renderH2: function() {
+  let parent = document.getElementById('section');
+  let subHeader = document.createElement('h2');
+  subHeader.setAttribute('id', this.location);
+  subHeader.textContent = `${this.location}`;
+  parent.appendChild(subHeader);
+},
+renderUL: function() {
+  let parent = document.getElementById(this.location);
+  let unorderedList = document.createElement('ul');
+  unorderedList.setAttribute('id', this.location+'ul');
+  parent.appendChild(unorderedList);
+},
+renderLI: function() {
+  let parent = document.getElementById(this.location+'ul');
+  let listItem;
+  for (let i = 0; i < this.cookiesPerHour().length; i++) {
+    listItem = document.createElement('li');
+    listItem.textContent= this.cookiesPerHour()[i];
+    parent.appendChild(listItem);
+  }
