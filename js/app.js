@@ -51,7 +51,6 @@ console.log('I AM A DRAGON AND I AM ALIVE')
 // Hours of opperation and locations
 
 var storeHoursArr = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm']
-var StoresArr = ['seattle','tokyo','dubai','paris','lima']
 var allStores = [];
 
 // lets make a constructor
@@ -77,24 +76,32 @@ function Stores(location,minCustomers,maxCustomers,avgCookieBuy){
       this.guestCookiesArr.push(`${storeHoursArr[i]} : ${cookiesPerHourArr[i]}`,)
     } 
     this.dailyCookieCount.push(dailyCount);
-  };
-  this.render = function(){    
-    var storeName = document.getElementById(`${this.location}`);
-    storeName.textContent = this.location;
-
-    var parentElement = document.getElementById(`${this.location}Data`);
-    for(var i=0; i< this.guestCookiesArr[1].length; i++){
-      var listItem = document.createElement('li');
-      listItem.textContent = `${this.guestCookiesArr[i]} cookies`;
-      parentElement.appendChild(listItem);
-    }
-    var totalCookiesSold = document.getElementById(`${this.location}Total`);
-    totalCookiesSold.textContent = `Total cookies ${this.dailyCookieCount}`
-  };
-  allStores.push(this);
+  }
+    allStores.push(this);
 }
 
+
+var parentElement = document.getElementById('table');
+
+function header(){
+  var tableRow = document.getElementById('tr');
+  parentElement.appendChild(tableRow);
+
+  for(var i =0 ;i > storeHoursArr.length; i++){
+    var tableHead = document.getElementById('th');
+    tableHead.textContent = `${storeHoursArr}` 
+    parentElement.appendChild(tableHead);
+  }
+
+
+}
+// got stuck at making the table apear and how to call things need to aquire help. search for 45 min on google and kept breaking things.
+
+// cant seem to make it run function for calcGuestCookies.... HELP on wed!
+
+
 new Stores('Seattle', 23,65,6.3);
+Stores.seattle;
 new Stores('Tokyo',3,24,1.2);
 new Stores('Dubai',11,38,3.7);
 new Stores('Paris',20,38,2.3);
