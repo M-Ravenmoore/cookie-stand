@@ -4,12 +4,9 @@ console.log('I AM A DRAGON AND I AM ALIVE')
 
 // Hours of opperation
 var storeHoursArr = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm']
-
-// Locations of stores as objects
-
-
-//  Designers Question : for later work can i put this (12-end of citys) in to an object ie:salmonCookiesGlobalInfo? then instead of rendering in the citys creat one render that loops throuught the citys for the information?
-
+var storeLocationsNameArr = ['seattle','tokyo','dubai','paris','lima']
+var storeObjectsArr = [seattle,tokyo,dubai,paris,lima]
+// city object litterals
 var seattle = {
   location: 'seattle',
   minCust: 23,
@@ -35,18 +32,22 @@ var seattle = {
   },
   renderCity: function(){
     // put name on page
-    var storeName = document.getElementById('seattle');
+    var storeName = document.getElementById(`${this.location}`);
     storeName.textContent = this.location;
 
-    // put info on page
-      var seattleData = document.getElementById('seattleData')
-      seattleData.textContent = `Seattle Cookies Data ${[this.guestCookiesArr]}`;
+    var parentElement = document.getElementById(`${this.location}`);
+    for(var i=0; i< this.guestCookiesArr[1].length; i++){
+      var listItem = document.createElement('li');
+      listItem.textContent = `${this.guestCookiesArr[i]} cookies`;
+      parentElement.appendChild(listItem);
+    }
     
-    var totalCookiesSold = document.getElementById('seattleTotal');
-    totalCookiesSold.textContent = this.dailyCookieCount;
+    var totalCookiesSold = document.getElementById(`${this.location}Total`);
+    totalCookiesSold.textContent = `Total cookies ${this.dailyCookieCount}`
   }
 }
 var tokyo = {
+  location: 'tokyo',
   minCust: 3,
   maxCust: 24,
   avgCookieBuy: 1.2,
@@ -67,9 +68,25 @@ var tokyo = {
       this.guestCookiesArr.push(`${storeHoursArr[i]} : ${cookiesPerHourArr[i]}`,)
     } 
     this.dailyCookieCount.push(dailyCount);
+  },
+  renderCity: function(){
+    // put name on page
+    var storeName = document.getElementById(`${this.location}`);
+    storeName.textContent = this.location;
+
+    var parentElement = document.getElementById(`${this.location}`);
+    for(var i=0; i< this.guestCookiesArr[1].length; i++){
+      var listItem = document.createElement('li');
+      listItem.textContent = `${this.guestCookiesArr[i]} cookies`;
+      parentElement.appendChild(listItem);
+    }
+    
+    var totalCookiesSold = document.getElementById(`${this.location}Total`);
+    totalCookiesSold.textContent = `Total cookies ${this.dailyCookieCount}`
   }
 }
 var dubai = {
+  location: 'dubai',
   minCust: 11,
   maxCust: 38,
   avgCookieBuy: 3.7,
@@ -90,11 +107,27 @@ var dubai = {
       this.guestCookiesArr.push(`${storeHoursArr[i]} : ${cookiesPerHourArr[i]}`,)
     } 
     this.dailyCookieCount.push(dailyCount);
+  },
+  renderCity: function(){
+    // put name on page
+    var storeName = document.getElementById(`${this.location}`);
+    storeName.textContent = this.location;
+
+    var parentElement = document.getElementById(`${this.location}`);
+    for(var i=0; i< this.guestCookiesArr[1].length; i++){
+      var listItem = document.createElement('li');
+      listItem.textContent = `${this.guestCookiesArr[i]} cookies`;
+      parentElement.appendChild(listItem);
+    }
+    
+    var totalCookiesSold = document.getElementById(`${this.location}Total`);
+    totalCookiesSold.textContent = `Total cookies ${this.dailyCookieCount}`
   }
 }
 var paris = {
   minCust: 20,
   maxCust: 38,
+  location: 'paris',
   avgCookieBuy: 2.3,
   dailyCookieCount: [],
   guestCookiesArr: [],
@@ -113,9 +146,25 @@ var paris = {
       this.guestCookiesArr.push(`${storeHoursArr[i]} : ${cookiesPerHourArr[i]}`,)
     } 
     this.dailyCookieCount.push(dailyCount);
+  },
+  renderCity: function(){
+    // put name on page
+    var storeName = document.getElementById(`${this.location}`);
+    storeName.textContent = this.location;
+
+    var parentElement = document.getElementById(`${this.location}`);
+    for(var i=0; i< this.guestCookiesArr[1].length; i++){
+      var listItem = document.createElement('li');
+      listItem.textContent = `${this.guestCookiesArr[i]} cookies`;
+      parentElement.appendChild(listItem);
+    }
+    
+    var totalCookiesSold = document.getElementById(`${this.location}Total`);
+    totalCookiesSold.textContent = `Total cookies ${this.dailyCookieCount}`
   }
 }
 var lima = {
+  location: 'lima',
   minCust: 2,
   maxCust: 16,
   avgCookieBuy: 4.6,
@@ -136,8 +185,24 @@ var lima = {
       this.guestCookiesArr.push(`${storeHoursArr[i]} : ${cookiesPerHourArr[i]}`,)
     } 
     this.dailyCookieCount.push(dailyCount);
+  },
+  renderCity: function(){
+    // put name on page
+    var storeName = document.getElementById(`${this.location}`);
+    storeName.textContent = this.location;
+
+    var parentElement = document.getElementById(`${this.location}`);
+    for(var i=0; i< this.guestCookiesArr[1].length; i++){
+      var listItem = document.createElement('li');
+      listItem.textContent = `${this.guestCookiesArr[i]} cookies`;
+      parentElement.appendChild(listItem);
+    }
+    
+    var totalCookiesSold = document.getElementById(`${this.location}Total`);
+    totalCookiesSold.textContent = `Total cookies ${this.dailyCookieCount}`
   }
 }
+
 seattle.guestsCookies();
 tokyo.guestsCookies();
 dubai.guestsCookies();
@@ -145,3 +210,7 @@ paris.guestsCookies();
 lima.guestsCookies();
 console.log([seattle,tokyo,dubai,paris,lima]);
 seattle.renderCity();
+tokyo.renderCity();
+dubai.renderCity();
+paris.renderCity();
+lima.renderCity();

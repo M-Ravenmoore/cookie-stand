@@ -12,4 +12,8 @@ a project for begining devs to learn from
 * [figuring out nesting](sara Russert code included in files)
 
 ### Reflections and Comments
-
+//future paretn function allTheSalmonCookies to hold and runn as one command
+//future function runCookies
+  //loop through storeObjectsarr and apply .guestcookies
+//future function renderCookies
+  //loop thourgh store Objectsarr and apply .rendercity
