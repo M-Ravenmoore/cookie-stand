@@ -11,7 +11,7 @@ var storeHoursArr = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3
 //  Designers Question : for later work can i put this (12-end of citys) in to an object ie:salmonCookiesGlobalInfo? then instead of rendering in the citys creat one render that loops throuught the citys for the information?
 
 var seattle = {
-  location: seattle,
+  location: 'seattle',
   minCust: 23,
   maxCust: 65,
   avgCookieBuy: 6.3,
@@ -39,8 +39,11 @@ var seattle = {
     storeName.textContent = this.location;
 
     // put info on page
-    var storeData = document.getElementById('seattleData');
-    storeData.textContent = this.dailyCookieCount[0],[1];
+      var seattleData = document.getElementById('seattleData')
+      seattleData.textContent = `Seattle Cookies Data ${[this.guestCookiesArr]}`;
+    
+    var totalCookiesSold = document.getElementById('seattleTotal');
+    totalCookiesSold.textContent = this.dailyCookieCount;
   }
 }
 var tokyo = {
