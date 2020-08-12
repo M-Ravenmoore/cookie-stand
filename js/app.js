@@ -89,16 +89,19 @@ var dubai = new Location('Dubai',11,38,3.7);
 var paris = new Location('Paris',20,38,2.3);
 var lima = new Location('Lima',2,16,4.6);
 
-Location.prototype.renderData = function(){
-  var tableRow = document.getElementById('tr');
-  parentElement.appendChild(tableRow);
 
-  for(var i=0;i>cookiesPerHourArr.length;i++){
-    var tableData = document.getElementById('td');
-    tableData.textContent = cookiesPerHourArr[i];
-    parentElement.appendChild(tableData);
-  }
-}
+// WIP creating data chart on html
+
+// Location.prototype.renderData = function(){
+//   var tableRow = document.getElementById('tr');
+//   parentElement.appendChild(tableRow);
+
+//   for(var i=0;i>cookiesPerHourArr.length;i++){
+//     var tableData = document.getElementById('td');
+//     tableData.textContent = cookiesPerHourArr[i];
+//     parentElement.appendChild(tableData);
+//   }
+// }
 
 // helper functions
 
@@ -106,12 +109,16 @@ function buildHeader(){
   var tableRow = document.createElement('tr');
   parentElement.appendChild(tableRow);
   
+
   for(var i=0;i >storeHoursArr.length; i++){
+    var tableHead = document.createElement('th')
+    parentElement.appendChild(tableHead)
     var tableHead = document.getElementById('th');
   tableHead.textContent = `${storeHoursArr[i]}`; 
     tableRow.parentElement.appendChild(tableHead)
   }
 }
+
 
 function printPageTest(){
   for(var i=0; i<allStores.length;i++){
