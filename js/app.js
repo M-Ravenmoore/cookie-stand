@@ -92,16 +92,17 @@ var lima = new Location('Lima',2,16,4.6);
 
 // WIP creating data chart on html
 
-// Location.prototype.renderData = function(){
-//   var tableRow = document.getElementById('tr');
-//   parentElement.appendChild(tableRow);
+Location.prototype.renderData = function(){
+  var tableRow = document.createElement('tr');
+  parentElement.appendChild(tableRow);
+  var cookiearrayholder = this.guestCookiesArr;
 
-//   for(var i=0;i>cookiesPerHourArr.length;i++){
-//     var tableData = document.getElementById('td');
-//     tableData.textContent = cookiesPerHourArr[i];
-//     parentElement.appendChild(tableData);
-//   }
-// }
+  for(var i=0;i<cookiearrayholder.length;i++) {
+    var tableData = document.createElement('td');
+    tableData.textContent = cookiearrayholder[i][1]
+    tableRow.appendChild(tableData);
+  }
+}
 
 // helper functions
 
@@ -110,22 +111,22 @@ function buildHeader(){
   parentElement.appendChild(tableRow);
   
 
-  for(var i=0;i >storeHoursArr.length; i++){
+  for(var i=0;i <storeHoursArr.length; i++){
     var tableHead = document.createElement('th')
-    parentElement.appendChild(tableHead)
-    var tableHead = document.getElementById('th');
-  tableHead.textContent = `${storeHoursArr[i]}`; 
-    tableRow.parentElement.appendChild(tableHead)
+    tableRow.appendChild(tableHead);
+   
+    tableHead.textContent = `${storeHoursArr[i]}`; 
+    tableRow.appendChild(tableHead);
   }
 }
 
 
 function printPageTest(){
-  for(var i=0; i<allStores.length;i++){
+  for(var i=0; i<allStores.length;i++) {
     allStores[i].calcGuestCookies();
   }
 }
-
 // PUT IT ON PAGE
 buildHeader();
 printPageTest();
+seattle.renderData();
