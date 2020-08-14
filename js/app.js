@@ -77,6 +77,11 @@ function buildHeader(){
   }
 }
 
+
+
+
+
+
 function buildStoreContent(){
   buildHeader();
 }
