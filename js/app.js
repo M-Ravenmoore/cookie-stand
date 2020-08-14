@@ -3,7 +3,7 @@
 console.log('I AM A DRAGON AND I AM ALIVE')
 
 // Hours of opperation
-var storeHoursArr = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm']
+var storeHoursArr = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm']
 var storeLocationsNameArr = ['seattle','tokyo','dubai','paris','lima']
 var storeObjectsArr = [seattle,tokyo,dubai,paris,lima]
 // city object litterals
@@ -205,7 +205,7 @@ var lima = {
 }
 
 function getRandom(minCustomers,maxCustomers){
-  Math.ceil(Math.random() * (maxCustomers - minCustomers) + minCustomers)
+  return Math.ceil(Math.random() * (maxCustomers - minCustomers) + minCustomers)
 }
 
 
