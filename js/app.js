@@ -35,7 +35,7 @@ Location.prototype.calcGuestCookies = function(){
   // loops through store hours
   for(var i=0; i < storeHoursArr.length; i++){
     // attaches store hours to variable guestsPerHour
-    generateGuestCount = Math.ceil(Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers);
+    generateGuestCount = getRandom(this.minCustomers,this.maxCustomers)
     guestCount.push(generateGuestCount);
     cookiesPerHour = Math.ceil(generateGuestCount * this.avgCookieBuy);
     cookiesPerHourArr.push(cookiesPerHour);
@@ -59,6 +59,9 @@ Location.prototype.renderData = function(){
 }
 
 // helper functions
+function getRandom(minCust,maxCust){
+  return Math.ceil(Math.random() * (maxCust - minCust) + minCust);
+}
 
 function buildHeader(){
   var tableRow = document.createElement('tr');
@@ -69,18 +72,14 @@ function buildHeader(){
     var tableHead = document.createElement('th')
     tableHead.textContent = `${storeHoursArr[i]}`; 
     tableRow.appendChild(tableHead);
-  }
-}
-function buildStoreContent(){
-  buildHeader();
-  for(var i=0; i<allStores.length;i++) {
     allStores[i].calcGuestCookies();
     allStores[i].renderData();
-
   }
 }
 
-
+function buildStoreContent(){
+  buildHeader();
+}
 
 // PUT IT ON PAGE
 buildStoreContent();
