@@ -21,7 +21,8 @@ var seattle = {
     // loops through store hours
     for(var i=0; i < storeHoursArr.length; i++){
       // attaches store hours to variable guestsPerHour
-      generateGuestCount = Math.ceil(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+      generateGuestCount = getRandom(this.minCust,this.maxCust);
+      console.log(`this is guestcout ${generateGuestCount}`)
       guestCount.push(generateGuestCount);
       cookiesPerHour = Math.ceil(generateGuestCount * this.avgCookieBuy);
       cookiesPerHourArr.push(cookiesPerHour);
@@ -60,7 +61,7 @@ var tokyo = {
     // loops through store hours
     for(var i=0; i < storeHoursArr.length; i++){
       // attaches store hours to variable guestsPerHour
-      generateGuestCount = Math.ceil(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+      generateGuestCount = getRandom(this.minCust,this.maxCust);
       guestCount.push(generateGuestCount);
       cookiesPerHour = Math.ceil(generateGuestCount * this.avgCookieBuy);
       cookiesPerHourArr.push(cookiesPerHour);
@@ -99,7 +100,7 @@ var dubai = {
     // loops through store hours
     for(var i=0; i < storeHoursArr.length; i++){
       // attaches store hours to variable guestsPerHour
-      generateGuestCount = Math.ceil(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+      generateGuestCount = getRandom(this.minCust,this.maxCust);
       guestCount.push(generateGuestCount);
       cookiesPerHour = Math.ceil(generateGuestCount * this.avgCookieBuy);
       cookiesPerHourArr.push(cookiesPerHour);
@@ -138,7 +139,7 @@ var paris = {
     // loops through store hours
     for(var i=0; i < storeHoursArr.length; i++){
       // attaches store hours to variable guestsPerHour
-      generateGuestCount = Math.ceil(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+      generateGuestCount = getRandom(this.minCust,this.maxCust);
       guestCount.push(generateGuestCount);
       cookiesPerHour = Math.ceil(generateGuestCount * this.avgCookieBuy);
       cookiesPerHourArr.push(cookiesPerHour);
@@ -177,7 +178,7 @@ var lima = {
     // loops through store hours
     for(var i=0; i < storeHoursArr.length; i++){
       // attaches store hours to variable guestsPerHour
-      generateGuestCount = Math.ceil(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+      generateGuestCount = getRandom(this.minCust,this.maxCust);
       guestCount.push(generateGuestCount);
       cookiesPerHour = Math.ceil(generateGuestCount * this.avgCookieBuy);
       cookiesPerHourArr.push(cookiesPerHour);
@@ -202,6 +203,12 @@ var lima = {
     totalCookiesSold.textContent = `Total cookies ${this.dailyCookieCount}`
   }
 }
+
+function getRandom(minCustomers,maxCustomers){
+  Math.ceil(Math.random() * (maxCustomers - minCustomers) + minCustomers)
+}
+
+
 
 seattle.guestsCookies();
 tokyo.guestsCookies();
