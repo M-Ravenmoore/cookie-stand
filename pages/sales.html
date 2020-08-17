@@ -8,19 +8,22 @@
 </head>
 <body>
   <header>
-    <h1>sales</h1>
     <nav>
       <ul>
-        <li> <a href="../index.html">Home</a></li>
+        <li> <a harf="index.html">Home</a></li>
+        <li> <a href="pages/sales.html">Sales</a></li>
+        <li> <a href="pages/merchandise.html">Merch</a></li>
       </ul>
     </nav>
+    <h1>sales</h1>
   </header>
   <main>
-    <section id="locationForm">
+    <section>
       <form id="location-form">
         <fieldset>
-          <label> Location-Name
-            <input Name="city-name" type="text" />
+          <legend>Add a location</legend>
+          <label> Location Name
+            <input Name="locationName" type="text" />
           </label>
           <label> Minimum Customers per Hour
             <input Name="minCustomers" type="number" />
@@ -30,26 +33,18 @@
           </label>
           <label> Average Cookeis per Customer
             <input Name="avgCookieBuy" type="decimal" />
-          </label>
-
-        
+          </label>       
         </fieldset>
         <button type="submit">Submit</button>
       </form>
     </section>
+    <article id="locationtable">
+      <h2>JS TABLE SHOULD BE HERE</h2>
+      <table>
+        <tbody id ="table">
 
-
-    <h2>JS TABLE SHOULD BE HERE</h2>
-    <table>
-      <tbody id ="table">
-
-      </tbody>
-    </table>
-    <article>
-      <div class='city'>
-        <h2 id='seattle'></h2>
-        <p id='seattleData'></p>
-        <p id='seattleTotal'></p>
+        </tbody>  
+      </table>
     </article>
   </main>
   <footer>

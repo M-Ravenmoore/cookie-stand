@@ -77,7 +77,18 @@ function buildChart(){
   }
   parentElement.appendChild(tableRow);
 }
+var locationFormE1 = document.getElementById('location-form');
+locationFormE1.addEventListener('submit', handleFormSubmit);
 
+function handleFormSubmit(event){
+  event.preventDefault();
+  if(event.target){
+    console.log('the event.target is ', event.target);
+    console.log('the event.target.loctationName is', event.target.locationName);
+    console.log('the event.target.locationName.value is', event.target.locationName.value);
+    locationName =event.target.locationName.value;
+  }
+}
 function buildStoreContent(){
   buildChart();
 }
