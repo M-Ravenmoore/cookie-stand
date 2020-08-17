@@ -8,12 +8,15 @@ header {
   background-repeat: no-repeat;
   height: 260px;
 }
-nav {
+h1 header{
+  margin: auto auto;
+  
+}
+nav{
   display:flex;
+  flex-direction: inherit;
 }
-li nav{
-  flex:
-}
+
 article{
   max-width: 80%;
   padding: 10px auto;
@@ -31,10 +34,20 @@ h1,h2,h3{
 }
 h1 {
   font-size:72px;
+  font-family: 'Amatic SC', cursive;
 }
 h2{
   font-size:36px;
+  font-family: 'Amatic SC', cursive;
 }
 h3{
   font-size:28px;
+  font-family: 'Amatic SC', cursive;
+}
+p{
+  font-family: 'Cardo', serif;
+}
+
+#table{
+  font-family: 'Acme', sans-serif;
 }
