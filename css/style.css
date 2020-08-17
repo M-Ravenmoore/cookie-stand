@@ -1,0 +1,27 @@
+body {
+  max-width: 960px;
+  background-image: url(/Img/fish.jpg);
+  background-size: auto;
+}
+header {
+  background-color: rgba(33, 109, 86,.5);
+  background-image: url(/Img/salmon.png) ;
+  background-size: auto;
+  background-repeat: no-repeat;
+  height: 260px;
+}
+h1 header{
+  margin: auto auto;
+}
+article{
+  max-width: 740px;
+  padding: 10px auto;
+  margin: 15px auto;
+  background-color: rgba(40,88,125,.5);
+  border: 2px black solid;
+  min-height: 150px;
+}
+#familyphoto {
+  width:200px;
+  float: right;
+}
