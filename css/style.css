@@ -12,6 +12,7 @@ header {
 }
 h1 header{
   margin: auto auto;
+  font-family: 'Amatic SC', cursive;
 }
 article{
   max-width: 740px;
