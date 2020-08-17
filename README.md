@@ -22,15 +22,7 @@ these are notes from the builder about current projects and ideas for future fea
 
 Html things
 
-* put in content
-* salmon image
-  * use the 7 images needed
-
-* on index
-  * locations with addresses,
-  * hours open
-  * contact information
-  * Anything else you feel neccesary.
+  * use the 7 images nee
 
 * make a bit about the cookies use cookie pic and cutter
 * fish.jpeg could be bacground for something
@@ -40,8 +32,7 @@ chinook as footer
 
 css things
 
-* salmon.png in header  with background blue
-  text centered for store name! and below links 
+
 * find one sans serif font(data) one serif (text) and one Highlight font
 * 3 colors for fonts one for each font
 * 3 bg colors for elements

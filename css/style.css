@@ -1,21 +1,24 @@
 body {
-  max-width: 960px;
-  background-image: url(/Img/fish.jpg);
-  background-size: auto;
+  background-color: cadetblue;
 }
 header {
   background-color: rgba(33, 109, 86,.5);
   background-image: url(/Img/salmon.png) ;
-  background-size: auto;
+  background-position-x: center ;
   background-repeat: no-repeat;
   height: 260px;
 }
 h1 header{
   margin: auto auto;
-  font-family: 'Amatic SC', cursive;
+  
 }
+nav{
+  display:flex;
+  flex-direction: inherit;
+}
+
 article{
-  max-width: 740px;
+  max-width: 80%;
   padding: 10px auto;
   margin: 15px auto;
   background-color: rgba(40,88,125,.5);
@@ -23,6 +26,28 @@ article{
   min-height: 150px;
 }
 #familyphoto {
-  width:200px;
+  width:20%;
   float: right;
+}
+h1,h2,h3{
+  text-align: center;
+}
+h1 {
+  font-size:72px;
+  font-family: 'Amatic SC', cursive;
+}
+h2{
+  font-size:36px;
+  font-family: 'Amatic SC', cursive;
+}
+h3{
+  font-size:28px;
+  font-family: 'Amatic SC', cursive;
+}
+p{
+  font-family: 'Cardo', serif;
+}
+
+#table{
+  font-family: 'Acme', sans-serif;
 }
