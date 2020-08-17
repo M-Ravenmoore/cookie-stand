@@ -14,8 +14,14 @@ h1 header{
   margin: auto auto;
 }
 article{
+  max-width: 740px;
   padding: 10px auto;
   margin: 15px auto;
   background-color: rgba(40,88,125,.5);
   border: 2px black solid;
+  min-height: 150px;
+}
+#familyphoto {
+  width:200px;
+  float: right;
 }
